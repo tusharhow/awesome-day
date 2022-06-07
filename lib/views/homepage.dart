@@ -1,12 +1,11 @@
 import 'dart:math';
 import 'package:awesome_day/controllers/quote_controller.dart';
+import 'package:awesome_day/models/quote_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../components/change_quote_button_component.dart';
 import '../components/quote_component.dart';
-
-
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -23,7 +22,7 @@ class MyHomePage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  StreamBuilder<QuerySnapshot>(builder: (context, snapshot) {
+                  StreamBuilder<QuoteModel>(builder: (context, snapshot) {
                     if (!snapshot.hasData) {
                       return const Padding(
                         padding: EdgeInsets.only(
@@ -49,4 +48,3 @@ class MyHomePage extends StatelessWidget {
     );
   }
 }
-
