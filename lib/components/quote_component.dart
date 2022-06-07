@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import '../controllers/quote_controller.dart';
 
 class QuoteComponent extends StatelessWidget {
@@ -13,9 +12,10 @@ class QuoteComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<QuoteController>(builder: (controller) {
       return SizedBox(
-        height: 300,
+        height: 350,
         child: ListView.builder(
             itemCount: controller.quotes.length,
+            physics:  const BouncingScrollPhysics(),
             itemBuilder: (context, index) {
               final quote = controller.quotes[index];
               return Column(
