@@ -1,7 +1,6 @@
 import 'dart:math';
 import 'package:awesome_day/controllers/quote_controller.dart';
 import 'package:awesome_day/models/quote_model.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../components/change_quote_button_component.dart';
